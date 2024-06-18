@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/SRH_Heidelberg_logo.png" alt="image" width="100">
+
+                </div>
+                <div class="chatbox__content--header"> 
+                    <h4 class="chatbox__heading--header">Chat போட்</h4>
+                    <p class="chatbox__description--header">அன்புடன் வரவேற்கிறோம்</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <style>
+                .chatbox__footer input[type="text"] {
+                    font-size: 15px;
+                    height: 30px; 
+                    width: 300px; 
+                }
+            
+                .chatbox__footer .send__button {
+                    font-size: 20px; 
+                }
+            </style>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="கேள்விகள் இங்கே" size="100">
+                <button class="chatbox__send--footer send__button"> &#10148;</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
