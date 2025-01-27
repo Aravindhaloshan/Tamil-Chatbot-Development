@@ -12,85 +12,85 @@ from model import NeuralNet
 with open('intents.json', 'r', encoding='utf-8') as f:
     intents = json.load(f)
 
-all_words = []
-tags = []
-xy = []
+bo_words = []
+pins = []
+yx = []
 
 for intent in intents['intents']:
-    tag = intent['tag']
-    tags.append(tag)
+    pin = intent['tag']
+    pins.append(pin)
     for pattern in intent['patterns']:
-        w = tokenize(pattern)
-        all_words.extend(w)
-        xy.append((w, tag))
+        f = tokenize(pattern)
+        bo_words.extend(f)
+        yx.append((f, pin))
 
 
 ignore_words = ['?', '.', '!']
-all_words = [stem(w) for w in all_words if w not in ignore_words]
+all_words = [stem(f) for f in bo_words if f not in ignore_words]
 
-all_words = sorted(set(all_words))
-tags = sorted(set(tags))
+bo_words = sorted(set(bo_words))
+pins = sorted(set(pins))
 
-print(len(xy), "patterns")
-print(len(tags), "tags:", tags)
-print(len(all_words), "unique stemmed words:", all_words)
+print(len(yx), "patterns")
+print(len(pins), "tags:", pins)
+print(len(bo_words), "unique stemmed words:", bo_words)
 
 
-X_train = []
-y_train = []
-for (pattern_sentence, tag) in xy:
+A_train = []
+Z_train = []
+for (pattern_sentence, pin) in yx:
     
-    bag = bag_of_words(pattern_sentence, all_words)
-    X_train.append(bag)
+    bag = bag_of_words(pattern_sentence, bo_words)
+    A_train.append(bag)
     
-    label = tags.index(tag)
-    y_train.append(label)
+    label = pins.index(pin)
+    Z_train.append(label)
 
-X_train = np.array(X_train)
-y_train = np.array(y_train)
+A_train = np.array(A_train)
+Z_train = np.array(Z_train)
  
-num_epochs = 1000
-batch_size = 8
-learning_rate = 0.001
-input_size = len(X_train[0])
-hidden_size = 8
-output_size = len(tags)
-print(input_size, output_size)
+num_epochs = 900
+bat_size = 7
+learn_rate = 0.001
+in_size = len(A_train[0])
+hid_size = 8
+out_size = len(pins)
+print(in_size, out_size)
 
 class ChatDataset(Dataset):
 
     def __init__(self):
-        self.n_samples = len(X_train)
-        self.x_data = X_train
-        self.y_data = y_train
+        self.n_samples = len(A_train)
+        self.a_data = A_train
+        self.z_data = Z_train
 
     
     def __getitem__(self, index):
-        return self.x_data[index], self.y_data[index]
+        return self.a_data[index], self.z_data[index]
 
     
     def __len__(self):
         return self.n_samples
 
-dataset = ChatDataset()
-train_loader = DataLoader(dataset=dataset,
-                          batch_size=batch_size,
+datas = ChatDataset()
+train_loader = DataLoader(dataset=datas,
+                          batch_size=bat_size,
                           shuffle=True,
                           num_workers=0)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
+model = NeuralNet(in_size, hid_size, out_size).to(device)
 
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+optimizer = torch.optim.Adam(model.parameters(), lr=learn_rate)
 
 for epoch in range(num_epochs):
-    for (words, labels) in train_loader:
-        words = words.to(device)
+    for (alpha, labels) in train_loader:
+        alpha = alpha.to(device)
         labels = labels.to(dtype=torch.long).to(device)
         
-        outputs = model(words)
+        outputs = model(alpha)
         loss = criterion(outputs, labels)
         
        
@@ -106,14 +106,14 @@ print(f'final loss: {loss.item():.4f}')
 
 data = {
 "model_state": model.state_dict(),
-"input_size": input_size,
-"hidden_size": hidden_size,
-"output_size": output_size,
-"all_words": all_words,
-"tags": tags
+"in_size": in_size,
+"hid_size": hid_size,
+"out_size": out_size,
+"bo_words": bo_words,
+"pins": pins
 }
 
-FILE = "data.pth"
+FILE = "Files.pth"
 torch.save(data, FILE)
 
 print(f'training complete. file saved to {FILE}')
