@@ -56,6 +56,11 @@ The SRH University Website is a responsive, multi-page web application designed 
   ```bash
   pip install flask
   ```
+## Screenshots
+
+### Homepage
+![Homepage](Screenshots/Picture22.png)
+
 
 ### Installation Steps
 1. Clone the repository:
