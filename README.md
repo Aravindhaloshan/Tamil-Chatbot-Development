@@ -62,7 +62,7 @@ The SRH University Website is a responsive, multi-page web application designed 
 ![Homepage](Screenshots/Picture2.png)
 
 ### Chatbot 
-![Chatbot] (Screenshots/Picture1.png)
+![Chatbot](Screenshots/Picture1.png)
 
 
 ### Installation Steps
