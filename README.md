@@ -68,7 +68,7 @@ The SRH University Website is a responsive, multi-page web application designed 
 ### Installation Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/srh-university-website.git
+   git clone https://github.com/Aravindhaloshan/srh-university-website.git
    ```
 2. Navigate to the project directory:
    ```bash
