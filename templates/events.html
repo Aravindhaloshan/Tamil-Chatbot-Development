@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRH UNIVERSITY</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="{{ url_for('index_get') }}"><img src="/static/images/SRH.jpeg" alt="SRH Logo"></a>
+            <div class="nav-links" id="navLinks">
+                
+                <ul>
+                    <li><a href="{{ url_for('index_get') }}">ஹோம்</a></li>
+                    <li><a href="{{ url_for('about_get') }}">அபௌட்</a></li>
+                    <li><a href="{{ url_for('course_get') }}">கோர்ஸஸ்</a></li>
+                    <li><a href="{{ url_for('events_get') }}">நிகழ்வுகள்</a></li>
+                    <li><a href="{{ url_for('contact_get') }}">காண்டாக்ட்</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+        <h1 style="text-align: center;">எங்கள் தகவல் நிகழ்வுகளுக்கு வந்து எங்கள் பல்கலைக்கழகத்தை அறிந்து கொள்ளுங்கள்!</h1>
+    </section>
+        
+
+    <!-- blog content page -->
+    <section class="webinar-series">
+        <h1>எங்கள் 3 வெவ்வேறு வெபினார் தொடர்களில் சேரவும்</h1>
+        <div class="row">
+            <div class="webinar-series-col">
+                <img src="/static/images/Webinar.webp" alt="">
+                <h3>நான் எப்படி விண்ணப்பிப்பது?</h3>
+                <p>எப்பொழுது? மாதத்திற்கு 2 x புதன்கிழமைகளில் பிற்பகல் 3 மணிக்கு.</p>
+            </div>
+            <div class="webinar-series-col">
+                <img src="/static/images/Finance.webp" alt="">
+                <h3>எனது கல்வி செலவுகளை எவ்வாறுச் சமாளிக்க முடியும்?</h3>
+                <p>எப்பொழுது? ஒவ்வொரு மாதமும் கடைசி புதன்கிழமை மாலை 3 மணிக்கு.</p>
+            </div>
+            <div class="webinar-series-col">
+                <img src="/static/images/Question.webp" alt="">
+                <h3>உங்கள் கல்வி ஆலோசகருடன் கேள்வி-விடை அமர்வு.</h3>
+                <p>மாதத்தின் ஒவ்வொரு 1வது திங்கட்கிழமையும் 12pm மதியம்</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online and Hybrid Events  -->
+    <section class="Online">
+        <h1>எங்கள் ஆன்லைன் மற்றும் ஹைபிரிட் நிகழ்வுகள்</h1>
+        <div class="row">
+            <div class="Online-col">
+                <img src="/static/images/blog2.webp" alt="">
+                <h3>ஜெர்மனியில் ஏன் படிக்க வேண்டும்? SRHல் ஏன் படிக்க வேண்டும்?</h3>
+                <p>20.08.2024</p>
+            </div>
+            <div class="Online-col">
+                <img src="/static/images/blog.webp" alt="">
+                <h3>டாக்டர் ஆஃப் பிஸ்னஸ் அட்மினிஸ்ட்ரேஷன் (பார்ட்-டைம்) | ஆன்லைன் இன்ஃபோ செஷன்</h3>
+                <p>03.09.2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Events-->
+
+    <section class="Online">
+        <h1>எங்கள் மற்ற நிகழ்வுகள்</h1>
+        <div class="row">
+            <div class="Online-col">
+                <img src="/static/images/im.webp" alt="">
+                <h3>SRH லாப் ப்ராஜெக்ட்ஸ் 2024</h3>
+                <p>09.08.2024</p>
+            </div>
+            <div class="Online-col">
+                <img src="/static/images/caree.webp" alt="">
+                <h3>கரியர்:டைம் டிரெஸ்டன்</h3>
+                <p>23.10.2024</p>
+            </div>
+            <div class="Online-col">
+                <img src="/static/images/vv.webp" alt="">
+                <h3>கரியர்:டைம் டிரெஸ்டன் ஹாம்பர்க்</h3>
+                <p>13.11.2024</p>
+            </div>
+        </div>
+    </section>
+  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>எங்களை பற்றி</h4>
+        <p class="center-text">
+            நாங்கள் SRH பேர்லின்! SRH பெர்லின் பயன்பாட்டு அறிவியல் பல்கலைக்கழகம் 2019 இல் SRH ஹோட்சுலே பெர்லின் SRH ஹோட்டல்-அகாடமி டிரெஸ்டன், SRH Hochschule der populären Künste (hdpk) மற்றும் வடிவமைப்பு அகாடமி - SRH Hochschule Füund.
+            2020 முதல், எங்கள் புதிய SRH கேம்பஸ் ஹாம்பர்க்குடன் நாட்டின் வடபகுதியிலும் நாங்கள் பிரதிநிதித்துவப்படுத்தப்படுகிறோம்.
+        </p>
+        <div class="icons">
+            <a href="https://www.facebook.com/srhberlin" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/srhberlin/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/HdpkDe" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=491622095897&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/school/srh-berlin-university-of-applied-sciences/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="made-by">மேட் வித் <i class="fa fa-heart"></i>  அரவிந்த லோஷன்</p>
+      </section>
+      
+    
+
+<!-- JavaScript for toogle menu  -->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200";
+    }
+</script>
+
+</body>
+</html>

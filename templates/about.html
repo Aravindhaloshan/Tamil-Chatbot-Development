@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRH UNIVERSITY</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="{{ url_for('index_get') }}"><img src="/static/images/SRH.jpeg" alt="SRH Logo"></a>
+            <div class="nav-links" id="navLinks">
+                
+                <ul>
+                    <li><a href="{{ url_for('index_get') }}">ஹோம்</a></li>
+                    <li><a href="{{ url_for('about_get') }}">அபௌட்</a></li>
+                    <li><a href="{{ url_for('course_get') }}">கோர்ஸஸ்</a></li>
+                    <li><a href="{{ url_for('events_get') }}">நிகழ்வுகள்</a></li>
+                    <li><a href="{{ url_for('contact_get') }}">காண்டாக்ட்</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+        <h1 style="text-align: center;">அபௌட் அஸ்</h1>
+    </section>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- About Us content  -->
+<section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h1>நாம் ஒன்றாக இணைவோம்</h1>
+            <p>அதிகாரப் பரவலாக்கம்தான் நம்மை வேறுபடுத்துகிறது. நாங்கள் வெவ்வேறு இடங்களில் வேலை செய்கிறோம். எங்கள் போதனைக்கு எல்லைகள் தெரியாது. எங்கள் தலையில் இல்லை மற்றும் வரைபடத்தில் இல்லை.<br>
+                உலகம் முழுவதிலுமிருந்து மாணவர்கள் தங்கள் ஆர்வத்தையும் ஆர்வத்தையும் ஒரு தொழிலாக மொழிபெயர்க்க ஊக்குவிப்பது. புதிய அறிவைத் தேடுவதில் ஆசிரியர்களுடன் இணைந்து பணியாற்றுவதற்கும், முன்னோக்கு மாற்றத்தை எளிதாக்குவதற்கு உத்வேகம், தொடர்பு மற்றும் சர்வதேசத்தைப் பயன்படுத்துவதற்கும் அர்ப்பணிப்புடன் இருத்தல் - அதற்காகத்தான் நாங்கள் நிற்கிறோம்.</p>
+            <a href="{{ url_for('events_get') }}" class="hero-btn red-btn">இப்போது ஆராயுங்கள்</a>
+        </div>
+        <div class="about-col">
+            <img src="/static/images/unnamed.jpg" alt="Image">
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <section class="footer">
+        <h4>எங்களை பற்றி</h4>
+        <p class="center-text">
+            நாங்கள் SRH பேர்லின்! SRH பெர்லின் பயன்பாட்டு அறிவியல் பல்கலைக்கழகம் 2019 இல் SRH ஹோட்சுலே பெர்லின் SRH ஹோட்டல்-அகாடமி டிரெஸ்டன், SRH Hochschule der populären Künste (hdpk) மற்றும் வடிவமைப்பு அகாடமி - SRH Hochschule Füund.
+            2020 முதல், எங்கள் புதிய SRH கேம்பஸ் ஹாம்பர்க்குடன் நாட்டின் வடபகுதியிலும் நாங்கள் பிரதிநிதித்துவப்படுத்தப்படுகிறோம்.
+        </p>
+        <div class="icons">
+            <a href="https://www.facebook.com/srhberlin" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/srhberlin/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/HdpkDe" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=491622095897&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/school/srh-berlin-university-of-applied-sciences/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="made-by">மேட் வித் <i class="fa fa-heart"></i>  அரவிந்த லோஷன்</p>
+    </section>
+
+    <!-- JavaScript for toggle menu  -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

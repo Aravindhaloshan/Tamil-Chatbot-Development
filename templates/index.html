@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRH UNIVERSITY</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="{{ url_for('index_get') }}"><img src="/static/images/SRH.jpeg" alt="SRH Logo"></a>
+            <div class="nav-links" id=""navLinks>
+               
+                <ul>
+                    <li><a href="{{ url_for('index_get') }}">ஹோம்</a></li>
+                    <li><a href="{{ url_for('about_get') }}">அபௌட்</a></li>
+                    <li><a href="{{ url_for('course_get') }}">கோர்ஸஸ்</a></li>
+                    <li><a href="{{ url_for('events_get') }}">நிகழ்வுகள்</a></li>
+                    <li><a href="{{ url_for('contact_get') }}">காண்டாக்ட்</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+        <div class="text-box">
+            <h1>SRH  யூனிவர்சிட்டி ஆஃப் அப்பிளைடு சயன்சஸ்</h1>
+            <p>உங்கள் இலக்கு. உங்கள் படிப்புகள்</p>
+            <a href="/templates/about.html" class="hero-btn">மேலும் அறிய கிளிக் செய்யவும்</a>
+        </div>
+        
+        
+    </section>
+
+<!-- Courses -->
+<section class="course">
+    <div class="row">
+        <div class="course-col">
+            <div>
+                <h2>விண்டர் செமஸ்டர்(2024-2025) இருந்து புதிய கேம்பஸ்</h2>
+                <p>நாங்கள் எங்கள் பெர்லின் இருப்பிடங்களை ஒன்றிணைத்து, பெர்லின்-நியூகோல்னில் உள்ள நீர்முனைக்கு நகர்கிறோம்! புதிய பெர்லின் வளாகம் நவீன கட்டிடக்கலை மற்றும் மாணவர்களுக்கான அதிநவீன வசதிகளுடன் இணைக்கப்பட்டுள்ளது. இது ஒரு இலக்கை மனதில் கொண்டு அடித்தளத்தில் இருந்து வடிவமைக்கப்பட்டது: மக்கள் கற்று மகிழும் இடத்தை உருவாக்குவதற்கும் அவர்களின் வாழ்க்கைக்கு அடித்தளம் அமைப்பதற்கும்.</p>
+            </div>
+        </div>
+        <div class="course-col">
+            <div>
+                <h1 class="special-heading">நாங்கள் உங்கள் எதிர்காலத்தை வடிவமைக்கிறோம்</h1>
+                <p>ஐந்து நகரங்களில் உள்ள எட்டு பள்ளிகள்: பெர்லின், டிரெஸ்டன், ஹாம்பர்க், லீப்ஜிக் மற்றும் ஸ்டட்கார்ட். 80 க்கும் மேற்பட்ட அங்கீகாரம் பெற்ற ஜெர்மன் மற்றும் ஆங்கில படிப்பு திட்டங்களில் 100 க்கும் மேற்பட்ட நாடுகளில் இருந்து ஆசிரியர்கள் மற்றும் மாணவர்கள். மேலாண்மை மற்றும் தொழில்முனைவு, ஊடகம் மற்றும் படைப்புத் தொழில்கள், தொழில்நுட்பம் மற்றும் தகவல் தொழில்நுட்பம், இசை, வடிவமைப்பு, திரைப்படம் மற்றும் உரை ஆகியவற்றில் பல்வேறு வாய்ப்புகள்.</p>
+            </div>
+        </div>
+        <div class="course-col">
+            <div>
+                <h3>அடிப்படைக் கொள்கையின்படி படிப்பது</h3>
+                <p>CORE கொள்கையின்படி படிக்கவும்! சிறிய குழுக்களில் பயிற்சி சார்ந்த கற்றல், 5 வார ஸ்பிரிண்ட்களில் படிப்படியான திறன்களைப் பெறுதல் மற்றும் விரிவுரையாளர்களிடமிருந்து தனிப்பட்ட ஆதரவு. SRH இல் தூய முன்நிலை கற்பித்தல் இல்லை. மாறாக, எங்கள் விரிவுரையாளர்கள் உங்களுக்காக தனிப்பட்ட கற்றல் பயிற்சியாளர்களாக மாறுகிறார்கள். ஒன்றாக, நீங்கள் சிறப்பு அறிவை வளர்ப்பது மட்டுமல்லாமல், உங்கள் மென்மையான மற்றும் கடினமான திறன்களை வளர்த்துக் கொள்வீர்கள். இதை அடைய, நாங்கள் நேரடி தகவல்தொடர்புகளை நம்பியுள்ளோம். தனிப்பட்ட ஆலோசனை, டிஜிட்டல் பரிமாற்றம் மற்றும் தொடர்ந்து கருத்து எங்களுக்கு முக்கியம்.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        </div>
+     </section>
+     
+
+
+<!-- Facilities -->
+
+<section class="webinar-series">
+    <h1>எங்கள் 3 வெவ்வேறு வெபினார் தொடர்களில் சேரவும்</h1>
+    <div class="row">
+        <div class="webinar-series-col">
+            <img src="/static/images/Webinar.webp" alt="">
+            <h3>நான் எப்படி விண்ணப்பிப்பது?</h3>
+            <p>எப்பொழுது? மாதத்திற்கு 2 x புதன்கிழமைகளில் பிற்பகல் 3 மணிக்கு.</p>
+        </div>
+        <div class="webinar-series-col">
+            <img src="/static/images/Finance.webp" alt="">
+            <h3>எனது கல்வி செலவுகளை எவ்வாறுச் சமாளிக்க முடியும்?</h3>
+            <p>எப்பொழுது? ஒவ்வொரு மாதமும் கடைசி புதன்கிழமை மாலை 3 மணிக்கு.</p>
+        </div>
+        <div class="webinar-series-col">
+            <img src="/static/images/Question.webp" alt="">
+            <h3>உங்கள் கல்வி ஆலோசகருடன் கேள்வி-விடை அமர்வு.</h3>
+            <p>மாதத்தின் ஒவ்வொரு 1வது திங்கட்கிழமையும் 12pm மதியம்</p>
+        </div>
+    </div>
+</section>
+
+<!-- testimonials -->
+<section class="testimonials">
+    <h1>ஆன்லைன் & ஹைபிரிட் இவேண்ட்ஸ்"</h1>
+    <p>எங்கள் ஆன்லைன் நிகழ்வுகளில் சேர்ந்து எங்கள் பல்கலைக்கழகத்தை அறிந்து கொள்ளுங்கள். எங்கள் ஆய்வுத் திட்டங்களைப் பற்றி மேலும் அறிக, தனிப்பட்ட ஆலோசனைகள் மற்றும் அனுபவ விரிவுரைகளைப் பெறுங்கள். தயங்காமல் பாருங்கள்!</p>
+    
+
+    <div class="testimonials-row">
+        <div class="testimonial-col">
+            <div>
+                <h3>ஏன் ஜெர்மனியில் படிக்க வேண்டும்? SRHல் ஏன் படிக்க வேண்டும்?</h3>
+                <p>நிகழ்வு நேரம்: 20.08.24 </p>
+                <p>நான் ஏன் ஜெர்மனியில் படிக்க தேர்வு செய்ய வேண்டும்? வெளிநாட்டில் படிப்பதன் நன்மைகள் என்ன? படிப்புக்கு மிகவும் பிரபலமான ஜெர்மனி எது?</p>
+                <p><strong>லொகேஷன்:</strong> ஆன்லைன் </p>   
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <div>
+                <h3>உங்கள் பேராசிரியரை ஆன்லைனில் சந்திக்கவும் | எங்கள் படைப்பு முதுநிலை திட்டங்கள்</h3>
+                <p> நிகழ்வு நேரம்: 06.08.24</p>
+                <p>எங்கள் பேராசிரியர்கள் மற்றும் மாணவர் ஆலோசகர்கள் பல்வேறு SRH இடங்களில் ஆக்கப்பூர்வமான முதுகலை பட்டப்படிப்புகளை உங்களுக்கு அறிமுகப்படுத்துவார்கள்</p>
+                <p><strong>லொகேஷன்:</strong>அன்மெல்டுங்/பதிவு </p>   
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <div>
+                <h3>டாக்டர் ஆஃப் பிஸ்நஸ் அட்மினிஸ்ட்ரேஷன் | ஆன்லைன் இன்ஃபோ செஷன்</h3>
+                <p>நிகழ்வு நேரம்:: 03.09.24 </p>
+                <p>பேராசிரியர் டாக்டர் இயன் டவர்ஸின் பகுதி நேர நிகழ்ச்சியான டாக்டர் ஆஃப் பிசினஸ் அட்மினிஸ்ட்ரேஷன் பிரசென்டேஷன்</p>
+                <p><strong>லொகேஷன்:</strong> அன்மெல்டுங்</p>   
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call To Action  -->
+ <section class="cta">
+    <h1>எங்கள் பல்வேறு திட்டங்களுக்கு பதிவு செய்யவும்</h1>
+    <a href="/templates/course.html" class="hero-btn">எங்களை தொடர்பு கொள்ள</a>
+ </section>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Footer -->
+    <section class="footer">
+        <h4>எங்களை பற்றி</h4>
+        <p class="center-text">
+            நாங்கள் SRH பேர்லின்! SRH பெர்லின் பயன்பாட்டு அறிவியல் பல்கலைக்கழகம் 2019 இல் SRH ஹோட்சுலே பெர்லின் SRH ஹோட்டல்-அகாடமி டிரெஸ்டன், SRH Hochschule der populären Künste (hdpk) மற்றும் வடிவமைப்பு அகாடமி - SRH Hochschule Füund.
+            2020 முதல், எங்கள் புதிய SRH கேம்பஸ் ஹாம்பர்க்குடன் நாட்டின் வடபகுதியிலும் நாங்கள் பிரதிநிதித்துவப்படுத்தப்படுகிறோம்.
+        </p>
+        <div class="icons">
+            <a href="https://www.facebook.com/srhberlin" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/srhberlin/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/HdpkDe" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=491622095897&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/school/srh-berlin-university-of-applied-sciences/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="made-by">மேட் வித் <i class="fa fa-heart"></i>  அரவிந்த லோஷன்</p>
+      </section>
+      
+    
+
+<!-- JavaScript for toogle menu  -->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200";
+    }
+</script>
+
+
+</body>
+</html>
